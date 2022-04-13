@@ -497,8 +497,17 @@
 //     console.log(myArray[key])
 // }
 
-const myArray = [true, 10, 'abc', null]
 
-myArray.forEach(element => {
-    console.log(element)
-})
+class Comment {
+    constructor(text) {
+        this.text = text
+        this.votesQty =0
+    }
+    upvot() {
+        this.votesQty += 1
+    }
+}
+
+const firstComment = new Comment('First Comment')
+
+console.log(firstComment)
