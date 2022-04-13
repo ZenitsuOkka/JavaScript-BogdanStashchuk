@@ -1,3 +1,8 @@
-import printMyName from './moduleOne.mjs'
+// import printMyName from './moduleOne.mjs'
 
-printMyName() //Andrej
+// printMyName() //Andrej
+
+import sum from './moduleOne.mjs'
+
+const  res1 = sum(10, 2)
+console.log(res1)
