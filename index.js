@@ -498,33 +498,45 @@
 // }
 
 
-class Comment {
-    constructor(text) {
-        this.text = text
-        this.votesQty =0
-    }
-    upvot() {
-        this.votesQty += 1
-    }
+// class Comment {
+//     constructor(text) {
+//         this.text = text
+//         this.votesQty =0
+//     }
+//     upvot() {
+//         this.votesQty += 1
+//     }
 
-    static mergeComment (first, second) {
-        return `${first} ${second}`
+//     static mergeComment (first, second) {
+//         return `${first} ${second}`
+//     }
+// }
+
+// const firstComment = new Comment('First Comment')
+// const secondComment = new Comment('Second Comment')
+// const thirdComment = new Comment('Third Comment')
+// Comment.mergeComment('First comment.', 'Second comment')
+
+
+
+// console.log(firstComment)
+// console.log(secondComment)
+// console.log(thirdComment)
+// console.log(Comment.mergeComment('First comment.', 'Second comment'))
+
+
+// firstComment.hasOwnProperty('text')
+// firstComment.hasOwnProperty('votesQty')
+// firstComment.hasOwnProperty('text')
+
+
+class NumberArray extends Array {
+    sum(){
+        return this.reduce((el, acc) => acc += el, 0)
     }
 }
 
-const firstComment = new Comment('First Comment')
-const secondComment = new Comment('Second Comment')
-const thirdComment = new Comment('Third Comment')
-Comment.mergeComment('First comment.', 'Second comment')
+const myArray = new NumberArray(2, 5, 7)
 
-
-
-console.log(firstComment)
-console.log(secondComment)
-console.log(thirdComment)
-console.log(Comment.mergeComment('First comment.', 'Second comment'))
-
-
-firstComment.hasOwnProperty('text')
-firstComment.hasOwnProperty('votesQty')
-firstComment.hasOwnProperty('text')
+console.log(myArray)
+myArray.sum()
