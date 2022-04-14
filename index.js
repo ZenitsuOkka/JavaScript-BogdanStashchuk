@@ -509,5 +509,17 @@ class Comment {
 }
 
 const firstComment = new Comment('First Comment')
+const secondComment = new Comment('Second Comment')
+const thirdComment = new Comment('Third Comment')
+
+
 
 console.log(firstComment)
+console.log(secondComment)
+console.log(thirdComment)
+
+
+
+firstComment.hasOwnProperty('text')
+firstComment.hasOwnProperty('votesQty')
+firstComment.hasOwnProperty('text')
