@@ -506,18 +506,23 @@ class Comment {
     upvot() {
         this.votesQty += 1
     }
+
+    static mergeComment (first, second) {
+        return `${first} ${second}`
+    }
 }
 
 const firstComment = new Comment('First Comment')
 const secondComment = new Comment('Second Comment')
 const thirdComment = new Comment('Third Comment')
+Comment.mergeComment('First comment.', 'Second comment')
 
 
 
 console.log(firstComment)
 console.log(secondComment)
 console.log(thirdComment)
-
+console.log(Comment.mergeComment('First comment.', 'Second comment'))
 
 
 firstComment.hasOwnProperty('text')
