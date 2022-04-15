@@ -530,13 +530,42 @@
 // firstComment.hasOwnProperty('text')
 
 
-class NumberArray extends Array {
-    sum(){
-        return this.reduce((el, acc) => acc += el, 0)
-    }
+// class NumberArray extends Array {
+//     sum(){
+//         return this.reduce((el, acc) => acc += el, 0)
+//     }
+// }
+
+// const myArray = new NumberArray(2, 5, 7)
+
+
+// console.log(myArray)
+// console.log(myArray.sum())
+
+// const getData = (url) =>
+//     new Promise((resolve, reject) => 
+//     fetch(url)
+//     .then(response => response.json())
+//     .then(json =>resolve(json))
+//     .catch(error => reject(error))
+    
+// )
+
+// getData('url')
+//     .then(data => console.log(data))
+//     .catch(rror => console.log(error.message))
+
+
+const timerPromise = () =>
+    new Promise((resolve, reject) =>
+        setTimeout(() => resolve(), 2000))
+
+const asyncFn = async () => {
+    console.log('Time starts')
+    const startTime = perfomance.now()
+    await timerPromise()
+    const endTime = performance.now()
+    console.log('Timer ended', endTime - startTime)
 }
 
-const myArray = new NumberArray(2, 5, 7)
-
-console.log(myArray)
-myArray.sum()
+asyncFn()
